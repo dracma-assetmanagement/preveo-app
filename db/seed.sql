@@ -1,0 +1,93 @@
+-- Preveo · contenido inicial
+-- Comodines disponibles: {jugador} {otro} {equipoA} {equipoB}
+USE preveo;
+
+INSERT INTO cartas (juego_slug, tipo, texto) VALUES
+-- ─────────────── Yo Nunca Nunca ───────────────
+('yo-nunca-nunca', NULL, 'Yo nunca nunca mandé un mensaje a las 4 de la mañana del que me arrepentí al otro día.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca me hice el dormido para no contestar un mensaje.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca stalkeé el perfil del ex de mi ex.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca me fui de una fiesta sin avisarle a nadie.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca dije "ya salgo" estando todavía en pijama.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca mentí sobre cuánto tomé la noche anterior.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca le puse "me gusta" a una foto de tres años atrás sin querer.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca fingí conocer una banda solo para quedar bien.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca me colé en una fiesta a la que no estaba invitado.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca lloré con una serie y después lo negué.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca usé la excusa de que se me quedó sin batería el celu.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca me quedé dormido en el colectivo y me pasé de parada.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca revisé el celular de alguien sin permiso.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca canté en un karaoke una canción que en realidad no me sé.'),
+('yo-nunca-nunca', NULL, 'Yo nunca nunca inventé una historia para zafar de un plan.'),
+
+-- ─────────────── Verdad o Reto · verdades ───────────────
+('verdad-o-reto', 'verdad', '{jugador}, ¿cuál fue tu peor chamuyo y cómo terminó?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿a quién de esta ronda le mandarías un mensaje a las 3 de la mañana?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿qué mentira contaste que todavía nadie descubrió?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿cuál fue la compra impulsiva más ridícula de tu vida y cuánto salió?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿de quién te acordás cuando escuchás tu canción favorita?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿cuál es el último chisme que contaste que no era tuyo?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿qué pensaste la primera vez que viste a {otro}?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿cuál fue la excusa más berreta que usaste para faltar?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿qué tenés en el celular que no querés que veamos?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿cuál fue el momento más vergonzoso que viviste estando sobrio?'),
+('verdad-o-reto', 'verdad', '{jugador}, ¿a quién de la ronda le pedirías plata prestada y a quién nunca?'),
+
+-- ─────────────── Verdad o Reto · retos ───────────────
+('verdad-o-reto', 'reto', '{jugador}: hablá en verso hasta que te vuelva a tocar, o tomá dos.'),
+('verdad-o-reto', 'reto', '{jugador}: dejá que {otro} te escriba una story y publicala tal cual.'),
+('verdad-o-reto', 'reto', '{jugador}: imitá a alguien de la ronda hasta que adivinen quién es.'),
+('verdad-o-reto', 'reto', '{jugador}: mandale un audio cantando a la última persona con la que hablaste.'),
+('verdad-o-reto', 'reto', '{jugador}: contá un chiste. Si nadie se ríe, tomás dos.'),
+('verdad-o-reto', 'reto', '{jugador}: pasale tu celular a {otro} durante una ronda entera.'),
+('verdad-o-reto', 'reto', '{jugador}: hacé 10 sentadillas antes de que termine la ronda.'),
+('verdad-o-reto', 'reto', '{jugador}: hablá sin usar la letra "a" hasta tu próximo turno.'),
+('verdad-o-reto', 'reto', '{jugador}: dejá que la ronda elija tu foto de perfil por las próximas 24 horas.'),
+('verdad-o-reto', 'reto', '{jugador}: llamá a alguien de tu agenda y cantale el feliz cumpleaños.'),
+('verdad-o-reto', 'reto', '{jugador}: dejá que {otro} te haga un peinado nuevo y quedate así una ronda.'),
+
+-- ─────────────── ¿Quién es más probable? ───────────────
+('quien-es-mas-probable', NULL, '¿Quién es más probable que se quede dormido en la previa?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que se ponga a llorar con una canción?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que termine bailando arriba de una mesa?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que pierda el celular en la salida?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que se haga amigo del de seguridad?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que mande el mensaje al grupo equivocado?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que se case primero?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que pague la cuenta de todos sin quejarse?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que se vuelva famoso en TikTok?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que llegue tarde a su propio cumpleaños?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que discuta con el chofer por el camino que agarró?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que se coma la última porción sin preguntar?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que cante karaoke sin haber tomado nada?'),
+('quien-es-mas-probable', NULL, '¿Quién es más probable que se mude a otro país de un día para el otro?'),
+
+-- ─────────────── Guerra de Equipos ───────────────
+('guerra-de-equipos', NULL, 'Mímica: un jugador de {equipoA} actúa una película y su equipo tiene 30 segundos para adivinar. Después va {equipoB}.'),
+('guerra-de-equipos', NULL, 'Nombren marcas de cerveza alternando equipos, sin repetir. El equipo que se queda en blanco, pierde.'),
+('guerra-de-equipos', NULL, 'Cada equipo canta 10 segundos de una canción que tenga la palabra "amor". El que se traba, pierde.'),
+('guerra-de-equipos', NULL, 'Duelo de miradas: un jugador de {equipoA} contra uno de {equipoB}. El primero que se ríe hace perder a su equipo.'),
+('guerra-de-equipos', NULL, 'Nombren jugadores de la Selección alternando equipos. El que duda más de 3 segundos, pierde.'),
+('guerra-de-equipos', NULL, 'Cada equipo tiene 60 segundos para inventar la mejor excusa para faltar al trabajo. Vota el equipo contrario.'),
+('guerra-de-equipos', NULL, 'Nombren países que empiecen con A, alternando equipos. El que falla, pierde.'),
+('guerra-de-equipos', NULL, 'Un jugador de cada equipo describe una palabra sin decirla. El equipo que adivina más rápido gana.'),
+('guerra-de-equipos', NULL, 'Piedra, papel o tijera: mejor de tres entre los capitanes de {equipoA} y {equipoB}.'),
+('guerra-de-equipos', NULL, 'Un equipo tararea una canción y el otro tiene 30 segundos para adivinarla. Después se cambia.'),
+('guerra-de-equipos', NULL, 'Trabalenguas: un jugador de cada equipo lo dice tres veces seguidas. El que se traba, pierde.'),
+('guerra-de-equipos', NULL, 'Nombren series sin repetir, alternando equipos, hasta que uno se quede sin ideas.'),
+('guerra-de-equipos', NULL, 'Cada equipo elige a un representante para hacer la mejor imitación de alguien del otro equipo. Vota la ronda.'),
+
+-- ─────────────── Desafíos ───────────────
+('desafios', NULL, '{jugador}: subí una story anunciando algo falso pero creíble.'),
+('desafios', NULL, '{jugador}: cambiale el nombre al grupo de WhatsApp por lo que diga la ronda.'),
+('desafios', NULL, '{jugador}: hablá con acento de otro país hasta tu próximo turno.'),
+('desafios', NULL, '{jugador} y {otro}: intercambien una prenda de ropa por dos rondas.'),
+('desafios', NULL, '{jugador}: describí a cada uno de la ronda con una sola palabra.'),
+('desafios', NULL, '{jugador}: dejá que {otro} elija una foto de tu galería para mostrarle a todos.'),
+('desafios', NULL, '{jugador}: aguantá una ronda entera sin hablar. Si hablás, tomás dos.'),
+('desafios', NULL, '{jugador}: hacé un brindis de 30 segundos dedicado a {otro}.'),
+('desafios', NULL, '{jugador}: mandale un mensaje a tu mamá diciéndole que la querés.'),
+('desafios', NULL, '{jugador}: sacate una selfie con la peor cara posible y ponela de foto de perfil por una hora.'),
+('desafios', NULL, '{jugador}: bailá 20 segundos sin música.'),
+('desafios', NULL, '{jugador}: contá el momento más vergonzoso de tu semana.'),
+('desafios', NULL, '{jugador}: dejá que la ronda te haga tres preguntas y respondelas todas.');

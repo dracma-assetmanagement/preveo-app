@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #08080a;
+  color: #f4f4f6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  /* Halo cálido arriba: el "reflejo del vaso" de la marca. */
+  background-image: radial-gradient(120% 55% at 50% -12%, rgba(245, 166, 35, 0.16), transparent 70%);
+  background-repeat: no-repeat;
+  min-height: 100dvh;
+}
+
+@layer components {
+  .contenedor {
+    @apply mx-auto w-full max-w-[560px] px-5;
+  }
+
+  .eyebrow {
+    @apply font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-mute;
+  }
+
+  .tarjeta {
+    @apply rounded-xl2 border border-line bg-panel;
+  }
+
+  .campo {
+    @apply w-full rounded-2xl border border-line bg-panel px-4 py-3.5 text-[15px] text-texto
+      placeholder:text-mute/70 outline-none transition focus:border-ambar/60
+      focus:ring-2 focus:ring-ambar/20;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3.5 font-display
+      text-[15px] font-semibold transition active:scale-[0.98] disabled:pointer-events-none
+      disabled:opacity-40;
+  }
+
+  .btn-principal {
+    @apply btn bg-ambar text-black hover:bg-ambarsoft;
+  }
+
+  .btn-secundario {
+    @apply btn border border-line bg-panel text-texto hover:border-ambar/40 hover:text-ambarsoft;
+  }
+
+  .btn-fantasma {
+    @apply btn text-mute hover:text-texto;
+  }
+}
+
+/* Accesibilidad: si el sistema pide menos movimiento, lo respetamos. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: rgba(245, 166, 35, 0.3);
+}
